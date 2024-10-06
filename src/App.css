@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900');
+ 
+/* *
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F0F2F5;
+  font-family: "Inter", sans-serif;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background-image: url('../assets/currency-bg-image.jpg');
+  background-size: cover; /* Ensures the background covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; 
+  background-attachment: fixed; /* Keeps the image in place when scrolling */
+}
+/* .card
+{
+    background-color: #ffffff;
+    width: 55%;
+    min-width: 550px;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+} */
+.card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  width: 55%;
+  /* height: 65%; */
+  min-width: 550px;
+  padding: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 12px; /* Slightly more rounded corners */
+  backdrop-filter: blur(15px); /* Blur effect for glass */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border to enhance glass look */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ 
+h1 {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  font-size: 30px !important;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #333;
+  padding: 16px; /* Adding padding for a better visual effect */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border to define the edges */
+  text-align: center; /* Center the text */
 }
+ 
+.currency_exchnage
+{
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0);
+  /* align-items: center; */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+} 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input_container {
+  width: 30%;
+  height: fit-content;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0);
 }
-
-.App-link {
-  color: #61dafb;
+ 
+.icon {
+  width: 20px;
+  position: absolute;
+  z-index: 99;
+  left: 12px;
+  bottom: 9px;
 }
+ 
+.input_label {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0);
+}
+ 
+.input_field {
+  width: auto;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 0 0 40px;
+  border-radius: 7px;
+  outline: none;
+  border: 0.5px solid #e5e5e558;
+  filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+ 
+.input_field:focus {
+  border: 1px solid transparent;
+  background: #fff;
+  box-shadow: 0px 0px 0px 2px #242424;
+  background-color: transparent;
+}
+ 
+/* .output
+{
+  background: rgba(255, 255, 255, 0.2);
+  width: 100;
+} */
+.output {
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%; /* Specify a percentage width or a fixed width like '300px' */
+  max-width: 1000px; /* Optional: set a max width for larger screens */
+  margin: 20px auto; /* Center the card horizontally */
+  padding: 0px; /* Add padding for better spacing */
+  border-radius: 10px; /* Optional: rounded corners for the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+} 
+ 
+/* h2
+{
+  width: 100%;
+  margin-top: 20px;
+  background-color: #89b88d;
+  padding: 26px;
+  border-radius: 10px;
+  color: #fff;
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  width: 100%;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.1); 
+  padding: 26px;
+  border-radius: 10px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Blur effect for glass look */
+  -webkit-backdrop-filter: blur(10px); 
+  color: #000000c7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border to define the edges */
 }
